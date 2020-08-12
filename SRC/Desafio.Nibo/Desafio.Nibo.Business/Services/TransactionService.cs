@@ -1,9 +1,9 @@
 ﻿using Desafio.Nibo.Business.Interfaces;
 using Desafio.Nibo.Business.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Desafio.Nibo.Business.Services
@@ -41,5 +41,9 @@ namespace Desafio.Nibo.Business.Services
             _transactionRepository?.Dispose();
         }
 
+        public Task<List<Transaction>> GetDistinctTransactions(List<IFormFile> files)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

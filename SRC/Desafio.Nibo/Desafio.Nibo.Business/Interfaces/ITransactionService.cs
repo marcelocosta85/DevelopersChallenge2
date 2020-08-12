@@ -1,4 +1,5 @@
 ﻿using Desafio.Nibo.Business.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,5 +12,6 @@ namespace Desafio.Nibo.Business.Interfaces
         Task Add(Transaction transaction);
         Task Update(Transaction transaction);
         Task Remove(Guid id);
+        Task <List<Transaction>> GetDistinctTransactions(List<IFormFile> files);
     }
 }
